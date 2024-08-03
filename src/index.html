@@ -1,13 +1,89 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>CursoTemplate</title>
+  <title>pokedex</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
 </head>
-<body>
+
+<body class="bg-white">
   <app-root></app-root>
 </body>
+<!--
+
+@media(prefers-reduced-motion) {
+  .hidden{
+    transition: none;
+  }
+}
+
+.scroll-element, .initial-load {
+    opacity: 0;
+    filter: blur(70px);
+    transition: all 1s ease-in-out;
+  }
+
+.left-to-right {
+    transform: translateX(-100%);
+}
+
+.right-to-left {
+    transform: translateX(100%);
+}
+
+.bottom-to-top, .initial-load {
+    transform: translateY(100%);
+}
+
+.scroll-element.show, .initial-load.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.bottom-to-top.show, .initial-load.show {
+    transform: translateY(0);
+}
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const initialLoadSection = document.querySelector('.initial-load');
+    setTimeout(() => {
+    initialLoadSection.classList.add('show');
+    }, 700); // Adiciona um pequeno atraso para o efeito visual
+    });
+
+    document.addEventListener('scroll', function () {
+    const elements = document.querySelectorAll('.scroll-element');
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+
+    if (elementTop < windowHeight - 45) { // 50px antes do elemento estar completamente visível
+      element.classList.add('show'); } else { element.classList.remove('show'); } if (elementBottom < 0) { // Quando o
+      elemento sai completamente da viewport element.classList.remove('show'); } }); });
+ -->
+
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', (e) => {
+
+    const cards = document.querySelectorAll('.card');
+    setTimeout(() => {
+
+      cards.forEach((card) => {
+        card.classList.add('show');
+      }, 700); // Adiciona um pequeno atraso para o efeito visual
+
+    });
+
+  });
+</script>
+
 </html>

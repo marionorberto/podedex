@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/bootstrap-icons/font/bootstrap-icons.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Monserat';
+  src: url('../public/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Monserat';
+}
+
+.card {
+    opacity: 0;
+    filter: blur(70px);
+    transition: all 1s ease-in-out;
+}
+
+.card:hover{
+  border: 2px solid rgba(218, 243, 33, 0.2) ;
+
+}
+
+.card {
+    transform: translateY(100%);
+}
+
+.card.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.card.show {
+    transform: translateY(0);
+}
+
+.card:nth-child(2){
+  transition-delay: 150ms;
+}
+
+
+.card:nth-child(3){
+  transition-delay: 300ms;
+}
+
+.card:nth-child(4){
+  transition-delay: 450ms;
+}
+
+.card:nth-child(5){
+  transition-delay: 600ms;
+}
+
+.card:nth-child(6){
+  transition-delay: 750ms;
+}
+
+.card:nth-child(7){
+  transition-delay: 900ms;
+}
+
+.card:nth-child(8){
+  transition-delay: 1050ms;
+}
+
+.card:nth-child(9){
+  transition-delay: 1200ms;
+}
+
+
