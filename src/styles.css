@@ -17,6 +17,7 @@
 
 body{
   font-family: 'Monserat';
+  overflow-x: hidden;
 }
 
 .card {
@@ -50,31 +51,31 @@ body{
 
 
 .card:nth-child(3){
-  transition-delay: 300ms;
+  transition-delay: 400ms;
 }
 
 .card:nth-child(4){
-  transition-delay: 450ms;
+  transition-delay: 550ms;
 }
 
 .card:nth-child(5){
-  transition-delay: 600ms;
+  transition-delay: 700ms;
 }
 
 .card:nth-child(6){
-  transition-delay: 750ms;
+  transition-delay: 850ms;
 }
 
 .card:nth-child(7){
-  transition-delay: 900ms;
-}
-
-.card:nth-child(8){
   transition-delay: 1050ms;
 }
 
+.card:nth-child(8){
+  transition-delay: 1250ms;
+}
+
 .card:nth-child(9){
-  transition-delay: 1200ms;
+  transition-delay: 1350ms;
 }
 
 

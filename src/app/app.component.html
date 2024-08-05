@@ -11,11 +11,10 @@
       <i class="bi bi-search absolute right-3 top-2 text-xl text-zinc-600"></i>
     </div>
     <div class="text-zinc-500">
-      <label for="filter">Filter by : <i
-          class="bi bi-chevron-down text-[12px] ms-1 pt-[2px] ps-[1px] pe-[1px] bg-black font-bold text-white"></i></label>
-      <select id="filter" name="filter" class="bg-transparent hidden">
-        <option value="type">Type</option>
-        <option value="pokemon">Pokemon</option>
+      <label for="filter">Filter by : </label>
+      <select id="filter" name="filter" class="p-1">
+        <option class="text-sm p-1" value="type">Type</option>
+        <option class="text-sm p-1" value="pokemon">Name</option>
       </select>
     </div>
   </section>
@@ -38,14 +37,19 @@
       Normal</div>
   </section>
   <section class="w-[85%] p-5 bg-white grid grid-cols-3 grid-rows-3 gap-4 mb-20 mt-11">
-    <div class="card p-4 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg flex-col">
+    <div class="card p-4 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg flex-col">
       <span class="font-bold">#0001</span>
       <div class="bg-yellow-300 mx-auto my-3 w-36 h-36">
 
       </div>
       <div class="flex justify-between items-baseline">
         <h4 class="text-4xl font-bold">Picatxu</h4>
-        <a href="" class="text-zinc-500 cursor-pointer hover:underline hover:text-zinc-700">Details</a>
+        <a href="#" class="details text-zinc-500 cursor-pointer hover:underline hover:text-zinc-700">Details</a>
+        <div class="modal">
+          <div class="modal-content">
+            Lorem ipsum dolor sit.
+          </div>
+        </div>
       </div>
       <div class="flex justify-start items-center gap-2 mt-2">
         <span class="bg-gray-200 text-gray-600 rounded-xl hover:shadow-md p-1 w-[77px] text-center">
@@ -57,23 +61,23 @@
       </div>
     </div>
 
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
     </div>
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
     </div>
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
-    </div>
-
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
-    </div>
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
-    </div>
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
     </div>
 
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
     </div>
-    <div class="card p-3 bg-neutral-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    </div>
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    </div>
+
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
+    </div>
+    <div class="card p-3 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg">
     </div>
 
 
@@ -101,6 +105,8 @@
       created by Mário Norberto <span class="font-bold">github.com/marionorberto</span>
     </a>
   </div>
+
+
   <section
     class="flex justify-between items-center w-[85%] pt-3 mt-11 mb-20 border-t-[2px] border-solid border-zinc-100">
     <div class="flex justify-between items-center gap-2"><a href="">
