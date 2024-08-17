@@ -27,6 +27,7 @@
 }
 
 
+
 /* The Close Button */
 .close {
   font-size: 28px;
@@ -77,4 +78,11 @@
 .poison, .fairy {
   color: #7c3aed;
   background-color: #ddd6fe  ;
+}
+
+
+@media not all and (min-width: 640px) {
+  .modal-content {
+      width: 85%;
+  }
 }

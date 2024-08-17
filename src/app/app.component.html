@@ -3,14 +3,14 @@
     <img src="../assets/images/pokemon.png" alt="" [width]="100" class="absolute left-5 top-4">
     <i (click)="closeModal($event)"
       class="bi bi-x-square-fill close absolute right-5 top-4 text-slate-700 hover:text-slate-600 cursor-pointer text-base"></i>
-    <section class="flex justify-between items-stretch pt-14">
+    <section class="flex justify-between items-stretch max-sm:flex-col-reverse pt-14 ">
       <section class="pb-4">
 
-        <h2 class="font-bold text-slate-600 text-5xl">{{value.name}}</h2>
+        <h2 class="font-bold text-slate-600 text-5xl max-sm:text-3xl">{{value.name}}</h2>
         <div class="flex justify-start gap-2 items-center mt-3">
 
           <span *ngFor='let option of value.types'
-            class="{{ option.type.name}} bg-gray-200 text-gray-600 rounded-xl hover:shadow-md p-1 w-[100px] text-center text-nowrap">
+            class="{{ option.type.name}} bg-gray-200 text-gray-600 rounded-xl hover:shadow-md p-1 w-[100px] text-center text-nowrap ">
             {{ option.type.name}}
           </span>
 
@@ -57,8 +57,8 @@
         </div>
       </section>
       <section class="pt-1 pb-4">
-        <h2 class="text-slate-600 text-5xl font-medium mb-3 ms-8">#0{{value.id}}</h2>
-        <img class="ms-6 w-[97%]" src="../assets/images/{{value.name}}.png" alt="">
+        <h2 class="text-slate-600 text-5xl max-sm:text-3xl font-medium mb-3 ms-8">#0{{value.id}}</h2>
+        <img class="ms-6 w-[97%] max-sm:w-[70%]" src="../assets/images/{{value.name}}.png" alt="">
       </section>
     </section>
   </div>
@@ -74,20 +74,20 @@
     </div>
   </div>
 
-  <section class="w-[75%] p-4 bg-white flex justify-evenly items-center">
+  <section class="w-[75%] p-4 bg-white flex justify-evenly items-center max-sm:flex-col">
     <a href="#" class="relative">
-      <h1 class="text-[40px] font-bold">Pokedex</h1>
+      <h1 class="text-[40px] font-bold max-sm:">Pokedex</h1>
       <img class="w-6 h-6 absolute top-5 left-[30px]" src="../assets/images/ball.png" alt="">
     </a>
-    <div class="relative w-[50%] ">
+    <div class="relative w-[50%]  max-sm:w-[100%]">
       <input type="text" (change)="refresh($event)" (keyup.enter)="handleSearching($event)"
-        class="hover:shadow-lg w-full ps-6 py-[10px] text-black border-solid border-[2px] border-neutral-300 bg-neutral-100 rounded-xl text-[15px]"
+        class="hover:shadow-lg w-full max-sm:w-[100%] ps-6 py-[10px] text-black border-solid border-[2px] border-neutral-300 bg-neutral-100 rounded-xl text-[15px] max-sm:text-[13px]"
         placeholder="Enter your pokemon here!" [(ngModel)]="searching">
       <i class="bi bi-search absolute right-3 top-2 text-xl text-zinc-600 cursor-pointer "
         (click)="handleSearching($event)"></i>
     </div>
-    <div class="text-zinc-500">
-      <label for="filter">Filter by : </label>
+    <div class="text-zinc-500 max-sm:text-[11px] max-sm:mt-2">
+      <label for="filter ">Filter by : </label>
       <select id="filter" name="filter" class="p-1">
         <option class="text-sm p-1" value="name">Name</option>
         <option class="text-sm p-1" value="id">Id</option>
@@ -95,16 +95,16 @@
     </div>
   </section>
 
-  <section class="w-[75%] mt-8">
+  <section class="w-[75%] mt-8 max-sm:mt-4">
     <h4 class="text-zinc-700 block text-2xl my-4 ">All types:</h4>
-    <section class="grid grid-cols-10 gap-1 ">
+    <section class="grid grid-cols-10 max-sm:grid-cols-4 gap-1  ">
       <div
-        class="element bg-zinc-200 text-zinc-600 rounded-xl hover:shadow-md p-[6px] w-[88px] text-center hover:translate-y-[-3px]"
+        class="element bg-zinc-200 text-zinc-600 rounded-xl hover:shadow-md p-[6px] max-sm:p-[1px] w-[88px] max-sm:w-[70px] max-sm:text-[13px]  text-center hover:translate-y-[-3px]"
         *ngFor="let type of types">
         {{ type }}</div>
     </section>
   </section>
-  <section class="w-[85%] p-5 bg-white grid grid-cols-3 grid-rows-4 gap-4 mb-20 mt-11">
+  <section class="w-[85%] p-5 bg-white grid grid-cols-3 grid-rows-4 max-sm:grid-cols-1 max-sm:grid-rows-1 gap-4 mb-20 mt-11 max-sm:place-items-center">
     <div *ngFor='let poke of pokemons' class="p-4 bg-zinc-100 w-[20rem] h-[20rem] rounded-xl shadow-lg flex-col">
 
       <span class="font-bold">#0{{poke.id}}</span>
@@ -130,26 +130,26 @@
     <button class="flex gap-2 justify-center items-center" *ngIf='!isInitialPage'>
       <i class="bi bi-chevron-left text-neutral-500 text-2xl cursor-pointer hover:text-black hover:shadow-2xl"
         (click)="discrease()"></i>
-      <span class="text-neutral-500 cursor-pointer hover:text-black hover:shadow-2xl" (click)="discrease()">Back</span>
+      <span class="text-neutral-500 cursor-pointer hover:text-black hover:shadow-2xl max-sm:hidden" (click)="discrease()">Back</span>
     </button>
     <div class="flex justify-center items-center gap-3 self-center">
       <span
-        class="bg-zinc-200 text-neutral-400 p-3 hover:bg-neutral-300 hover:text-zinc-500 hover:shadow-xl cursor-pointer"
+        class="bg-zinc-200 text-neutral-400 p-3 max-sm:p-1 max-sm:text-[13px] hover:bg-neutral-300 hover:text-zinc-500 hover:shadow-xl cursor-pointer"
         [ngClass]="{
         'pagination-active': actualPage == (i + 1)
       }" *ngFor='let pageNumber of numberofPages; let i = index' (click)="selectPage(i + 1)"> {{ i + 1 }}</span>
     </div>
     <div class="flex justify-center items-center gap-2" *ngIf="!isLastPage">
-      <span (click)="increase()" class="text-neutral-500  cursor-pointer hover:text-black hover:shadow-2xl">Next</span>
+      <span (click)="increase()" class="text-neutral-500  cursor-pointer hover:text-black hover:shadow-2xl max-sm:hidden">Next</span>
       <i class="bi bi-chevron-right text-neutral-500 text-2xl cursor-pointer hover:text-black hover:shadow-2xl"
         (click)="increase()"></i>
     </div>
     <div *ngIf="isLastPage"></div>
 
   </section>
-  <img src="../assets/images/pokemon.png" alt="" class="mt-[300px]" [width]="350">
-  <div class="text-neutral-600 text-start text-[13px] underline mt-[30px]">
-    <a href="https://www.github.com/marionorberto" class="italic">
+  <img src="../assets/images/pokemon.png" alt="" class="mt-[300px] max-sm:w-[200px]"  [width]="350">
+  <div class="text-neutral-600 text-start text-[13px] max-sm:text-[9px] underline mt-[30px]">
+    <a href="https://www.github.com/marionorberto" class="italic ">
       This pokedex was created by Mário Norberto <span class="font-bold">github.com/marionorberto</span>
     </a>
   </div>
@@ -160,7 +160,7 @@
         <h1 class="font-bold">Pokedex - </h1>
         <img class="w-3 h-3 absolute top-[7px] left-[11px]" src="../assets/images/ball.png" alt="">
       </a>
-      <span class="text-[15px]"> <i class="bi bi-at p-0 text-[15px] text-zinc-950"></i>Copyright All rights
+      <span class="text-[15px] max-sm:text-[10px]"> <i class="bi bi-at p-0 text-[15px] max-sm:text-[10px] text-zinc-950 "></i>Copyright All rights
         Reserved.</span>
     </div>
     <div class="flex gap-4 justify-evenly items-center">
@@ -169,5 +169,5 @@
     </div>
   </section>
   <a href="#"><i
-      class="bi bi-chevron-up absolute bottom-36 cursor-pointer  right-2 bg-black p-1 hover:bg-zinc-700 font-bold text-white text-2xl"></i></a>
+      class="bi bi-chevron-up max-sm:p-[2px] max-sm:text-xl absolute bottom-36 max-sm:bottom-[124px] cursor-pointer  right-2 bg-black p-1 hover:bg-zinc-700 font-bold text-white text-2xl"></i></a>
 </main>
